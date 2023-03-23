@@ -12,6 +12,7 @@ public class LoginFormController {
     public JFXPasswordField txtPassword;
     public JFXRadioButton rBtnDoctor;
 
+
     public void signInOnAction(ActionEvent actionEvent) {
     }
 
