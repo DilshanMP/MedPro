@@ -60,14 +60,4 @@ public class User {
         this.accountType = accountType;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", accountType=" + accountType +
-                '}';
-    }
 }

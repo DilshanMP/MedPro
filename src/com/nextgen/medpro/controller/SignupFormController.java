@@ -14,9 +14,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class SignupFormController {
     public AnchorPane signupContext;
@@ -36,21 +36,17 @@ public class SignupFormController {
         try {
             boolean isSaved = CrudUtil.execute(
                     "INSERT INTO user VALUES (?,?,?,?,?,?)",
-                    new IdGenerator().generateId(),
-                    user.getFirstname(),
-                    user.getLastname(),
-                    user.getEmail(),
-                    user.getPassword(),
-                    user.getAccountType().name()
+                    new IdGenerator().generateId(),user.getFirstname(),user.getLastname(),user.getEmail(),
+                    user.getPassword(),user.getAccountType().name()
             );
             if (isSaved){
-                new Alert(Alert.AlertType.CONFIRMATION,"Saved!");
+                new Alert(Alert.AlertType.CONFIRMATION,"Saved!").show();
                 setui();
             }else {
-                new Alert(Alert.AlertType.WARNING,"Try Again");
+                new Alert(Alert.AlertType.WARNING,"Try Again").show();
             }
 
-        }catch (SQLException | ClassNotFoundException e){
+        }catch (ClassNotFoundException| SQLException e){
             e.printStackTrace();
         }
 
@@ -63,7 +59,7 @@ public class SignupFormController {
 
     private void setui() throws IOException {
         Stage stage = (Stage) signupContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/Loginform.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../view/Loginform.fxml")))));
         stage.centerOnScreen();
     }
 }
