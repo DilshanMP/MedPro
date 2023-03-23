@@ -26,7 +26,7 @@ public class LoginFormController {
     public JFXRadioButton rBtnDoctor;
 
 
-    public void signInOnAction(ActionEvent actionEvent) {
+    public void signInOnAction(ActionEvent actionEvent) throws IOException {
         String email =txtEmail.getText();
         String password = txtPassword.getText();
         AccountType accountType =rBtnDoctor.isSelected()?AccountType.DOCTOR : AccountType.PATIENT;
@@ -48,28 +48,24 @@ public class LoginFormController {
                                 CrudUtil.execute("SELECT patient_id FROM patient WHERE email=?,email");
                         if (selectedPatientResult.next()){
                             setui("PatientDashboardForm");
+                        }else {
+                            setui("PatientRegistrationForm");
+                        }
+                    }else {
+                        ResultSet selectedPatientResult =
+                                CrudUtil.execute("SELECT doctor_id FROM patient WHERE email=?,email");
+                        if (selectedPatientResult.next()){
+                            setui("DoctorDashboardForm");
+                        }else {
+                            setui("DoctorRegistrationForm");
                         }
                     }
                 }
-
-
-
-
-
-
-
             }else {
                 new Alert(Alert.AlertType.WARNING,
                         String.format("we can't find an email (%s)",email)).show();
             }
-
-
-
-
-
-
-
-        }catch (SQLException | ClassNotFoundException e){
+        }catch (SQLException | ClassNotFoundException  e){
             e.printStackTrace();
         }
 
