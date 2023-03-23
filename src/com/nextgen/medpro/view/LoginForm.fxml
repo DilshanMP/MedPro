@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="loginContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="666.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nextgen.medpro.controller.LoginFormController">
    <children>
       <AnchorPane layoutX="12.0" layoutY="7.0" prefHeight="371.0" prefWidth="303.0" style="-fx-background-color: white;">
@@ -81,9 +80,9 @@
       <AnchorPane layoutX="301.0" layoutY="10.0" />
       <Separator layoutX="318.0" orientation="VERTICAL" prefHeight="387.0" prefWidth="0.0" />
       <ImageView fitHeight="387.0" fitWidth="360.0" layoutX="315.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="387.0" fitWidth="339.0" layoutX="321.0" pickOnBounds="true">
+      <ImageView fitHeight="387.0" fitWidth="318.0" layoutX="336.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/doctor.jpg" />
+            <Image url="@../assets/beautiful-young-female-doctor-looking-camera-office.jpg" />
          </image>
       </ImageView>
       <Label layoutX="18.0" layoutY="367.0" prefHeight="17.0" prefWidth="84.0" text="Form : Nextgen">
