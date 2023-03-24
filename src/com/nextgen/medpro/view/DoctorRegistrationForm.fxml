@@ -40,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
               </cursor>
           </JFXRadioButton>
-          <JFXButton fx:id="submitDataOnAction" layoutX="14.0" layoutY="271.0" onAction="#signUpOnAction" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #21BCFF;" text="Submit" textFill="WHITE">
+          <JFXButton layoutX="14.0" layoutY="271.0" onAction="#signUpOnAction" prefHeight="44.0" prefWidth="159.0" style="-fx-background-color: #21BCFF;" text="Submit" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="12.0" />
               </font>
