@@ -75,7 +75,7 @@ public class LoginFormController {
     }
 
     public void createAnAccountOnAction(ActionEvent actionEvent) throws IOException {
-       setUi("SignForm");
+       setUi("SignupForm");
     }
     private void setUi(String location) throws IOException {
         Stage stage =(Stage) loginContext.getScene().getWindow();
