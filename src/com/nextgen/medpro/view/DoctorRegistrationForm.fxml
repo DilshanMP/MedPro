@@ -58,5 +58,10 @@
       <JFXTextField fx:id="txtContact" alignment="CENTER" cache="true" focusColor="WHITE" layoutX="501.0" layoutY="50.0" prefHeight="38.0" prefWidth="152.0" promptText="Contact" style="-fx-border-color: #21BCFF;" unFocusColor="#21bcff" />
       <JFXTextField fx:id="txtSpecializations" alignment="CENTER" cache="true" focusColor="WHITE" layoutX="345.0" layoutY="102.0" prefHeight="38.0" prefWidth="152.0" promptText="Specializations" style="-fx-border-color: #21BCFF;" unFocusColor="#21bcff" />
       <JFXTextArea fx:id="txtAddress" layoutX="14.0" layoutY="149.0" prefHeight="101.0" prefWidth="324.0" promptText="Address" style="-fx-border-color: #0F9D58;" />
+      <JFXButton layoutX="580.0" layoutY="10.0" onAction="#backOnAction" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #0F9D58;" text="&lt;-Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>

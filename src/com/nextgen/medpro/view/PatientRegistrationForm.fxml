@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nextgen.medpro.controller.PatientRegistrationFormController">
+   <children>
+      <Label layoutX="57.0" layoutY="14.0" prefHeight="17.0" prefWidth="153.0" text="Patient Registration">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="43.0" prefHeight="1.0" prefWidth="600.0" />
+      <JFXButton layoutX="14.0" layoutY="10.0" prefHeight="17.0" prefWidth="34.0" style="-fx-background-color: black;" text="&lt;=" textFill="WHITE" />
+      <JFXTextField alignment="CENTER" layoutX="14.0" layoutY="55.0" promptText="First Name" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" layoutX="163.0" layoutY="55.0" promptText="Last Name" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" layoutX="311.0" layoutY="55.0" promptText="NIC" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" layoutX="14.0" layoutY="95.0" prefHeight="27.0" prefWidth="285.0" promptText="Email" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" layoutX="311.0" layoutY="95.0" promptText="Contact" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXDatePicker layoutX="14.0" layoutY="135.0" promptText="Date" />
+      <JFXRadioButton layoutX="218.0" layoutY="139.0" text="Male">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="299.0" layoutY="139.0" text="Female">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXTextArea layoutX="13.0" layoutY="174.0" prefHeight="130.0" prefWidth="435.0" promptText="Address" />
+      <JFXButton layoutX="477.0" layoutY="334.0" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: black;" text="Submit Data" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
