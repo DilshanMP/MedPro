@@ -2,6 +2,7 @@ package com.nextgen.medpro.controller;
 
 import com.nextgen.medpro.db.Database;
 import com.nextgen.medpro.dot.DoctorDto;
+import com.nextgen.medpro.util.Cookie;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -67,6 +68,12 @@ public class DoctorDashboardFormController {
         }
 
     }
+    public void checkUser() throws IOException{
+        if (null== Cookie.selectedUser){
+            setui("LoginForm");
+        }
+    }
+
     public void logoutOnAction(ActionEvent actionEvent) throws IOException {
         setui("LoginForm");
     }
@@ -76,7 +83,13 @@ public class DoctorDashboardFormController {
         stage.centerOnScreen();
     }
 
-    public void navigateToPatientManagementPage(MouseEvent mouseEvent) {
 
+
+    public void navigateToPatientAppointmentPage(ActionEvent actionEvent) throws IOException {
+        setui("AppointmentsForm");
+    }
+
+    public void navigateToPatientManagementPage(ActionEvent actionEvent) throws IOException {
+        setui("PatientManagementForm");
     }
 }

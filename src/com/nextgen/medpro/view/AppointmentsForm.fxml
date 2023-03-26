@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.nextgen.medpro.controller.AppointmentsFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="482.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nextgen.medpro.controller.AppointmentsFormController">
+   <children>
+      <Separator layoutY="62.0" prefHeight="2.0" prefWidth="887.0" />
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: #053254;" text="&lt;=" textFill="WHITE" />
+      <Label layoutX="69.0" layoutY="21.0" prefHeight="25.0" prefWidth="128.0" text="Appointment" textFill="#080036">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker layoutX="14.0" layoutY="72.0" prefHeight="25.0" prefWidth="135.0" promptText="From" />
+      <JFXDatePicker layoutX="157.0" layoutY="72.0" prefHeight="25.0" prefWidth="120.0" promptText="To" />
+      <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="70.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #181C33;" text="Serach" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXRadioButton layoutX="14.0" layoutY="115.0" text="All">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="75.0" layoutY="115.0" text="Pending">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="162.0" layoutY="115.0" text="Completed">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXTreeTableView layoutX="9.0" layoutY="152.0" prefHeight="299.0" prefWidth="864.0">
+         <columns>
+            <TreeTableColumn prefWidth="75.0" text="#Id" />
+            <TreeTableColumn prefWidth="141.0" text="Patient" />
+            <TreeTableColumn prefWidth="140.0" text="Date" />
+            <TreeTableColumn prefWidth="128.0" text="Time" />
+            <TreeTableColumn prefWidth="114.0" text="Amount" />
+            <TreeTableColumn prefWidth="152.0" text="Check State" />
+            <TreeTableColumn prefWidth="113.0" text="Manage" />
+         </columns>
+      </JFXTreeTableView>
+      <Label layoutX="791.0" layoutY="20.0" prefHeight="25.0" prefWidth="96.0" text="MedPro" textFill="#001854">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
